@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Verdadeiro</title>
+    <style>
+        /* Resetando o padding e margin */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #1a1a1a; /* Fundo escuro */
+            font-family: 'Courier New', Courier, monospace; /* Fonte de estilo "terror" */
+            color: #dcdcdc; /* Cor do texto em cinza claro */
+        }
+
+        /* Estilo do conteúdo centralizado */
+        .content {
+            text-align: center;
+            font-size: 5vw; /* Usando "vw" para o tamanho da fonte ser relativo à largura da tela */
+            padding: 3vw; /* Usando "vw" para responsividade */
+            background-color: #333; /* Fundo escuro para o bloco de texto */
+            border: 2px solid #00e927; /* Borda vermelha */
+            border-radius: 10px;
+            box-shadow: 0 0 30px rgba(51, 255, 0, 0.7); /* Efeito de sombra vermelha */
+            max-width: 80%;
+            margin: 0 auto;
+            transform: rotate(-5deg); /* Inclina levemente o texto */
+            animation: blink 1s infinite; /* Animação de piscar */
+        }
+
+        /* Animação de piscar do texto */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.5;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* Efeito de "nevoa" de fundo */
+        .fog {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/clouds.png') repeat;
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        /* Ajustes para telas menores */
+        @media (max-width: 768px) {
+            .content {
+                font-size: 8vw; /* Aumenta a fonte proporcionalmente em telas menores */
+                padding: 5vw; /* Ajusta o padding em telas pequenas */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content {
+                font-size: 10vw; /* Aumenta ainda mais em telas muito pequenas */
+                padding: 6vw; /* Ajusta mais ainda o padding */
+            }
+        }
+
+        h3 {
+            transform: rotate(180deg);
+            display: inline-block; /* Necessário para o efeito funcionar */
+            font-size: 30px; /* Tamanho da fonte */
+        }
+    </style>
+</head>
+<body>
+    <div class="fog"></div> <!-- Neblina ao fundo -->
+    <div class="content">
+        <p>O que você busca... já está à sua espera.</p>
+        <h3>274</h3>
+    </div>
+</body>
+</html>
